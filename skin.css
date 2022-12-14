@@ -1,0 +1,49 @@
+html{
+    background-color: rgb(39, 39, 39);
+}
+.pgcontainer{
+    width: 1000px;
+    margin: 0px auto;
+    background-color: rgb(59, 59, 59);
+    text-align: center;
+}
+
+.pgcontainer > h1{
+    color: White;
+}
+
+.calculator{
+    width: 300px;
+    margin: 0px auto;
+}
+
+.monitor{
+    width: 270px;
+    padding: 10px;
+    margin: 20px auto;
+}
+
+.flex-calc{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.button{
+    border: 0px;
+    font-size: 20px;
+    font-weight: bold;
+    width: 70px;
+    height: 70px;
+    margin: 2px;
+}
+
+.buttonAct{
+    background-color: lightslategrey;
+    border: 0px;
+    font-size: 20px;
+    font-weight: bold;
+    width: 70px;
+    height: 70px;
+    margin: 2px;
+}
