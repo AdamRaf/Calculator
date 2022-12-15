@@ -29,7 +29,7 @@ html{
     justify-content: center;
 }
 
-.button{
+.btn{
     border: 0px;
     font-size: 20px;
     font-weight: bold;
@@ -38,7 +38,12 @@ html{
     margin: 2px;
 }
 
-.buttonAct{
+.btn:active{
+    background-color: black;
+    color: white;
+}
+
+.act{
     background-color: lightslategrey;
     border: 0px;
     font-size: 20px;
@@ -46,4 +51,13 @@ html{
     width: 70px;
     height: 70px;
     margin: 2px;
+    color: White;
+}
+
+.eql{
+    background-color: rgb(247, 124, 53);
+}
+
+.c{
+    background-color: rgb(175, 44, 44);
 }
