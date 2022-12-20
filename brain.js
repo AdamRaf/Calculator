@@ -1,20 +1,22 @@
 let ipt = false;
-let val = 0;
 
 function input(x) {
     document.getElementById("line").value += x;
+    let eva = eval(document.getElementsByClassName("monitor equation")[0].value);
+    document.getElementsByClassName("monitor total")[0].value = eva;
     ipt = true;
 }
 
 function clr() {
-    document.getElementById("line").value = '';
+    document.getElementsByClassName("monitor equation")[0].value = '';
+    document.getElementsByClassName("monitor total")[0].value = '';
     ipt = false;
 }
 
 function clc() {
-    let a = eval(document.getElementsByClassName("monitor equation")[0].value);
+    let eva = eval(document.getElementsByClassName("monitor equation")[0].value);
     if (ipt == true){
-        document.getElementsByClassName("monitor total")[0].value = a;
+        document.getElementsByClassName("monitor total")[0].value = eva;
     } else {
         alert("input something");
     }
@@ -25,12 +27,20 @@ function act(q) {
     console.log(`eq = ${eq}`);
     let last = eq.charAt(eq.length-1);
     console.log(`last = ${last}`);
-    let eva = eval(document.getElementsByClassName("monitor equation")[0].value);
     if(last == "/" || last == "*" || last == "-" || last == "+"){
-        document.getElementsByClassName("monitor equation")[0].value = document.getElementsByClassName("monitor equation")[0].value.substring(0, eq.length-1);
-        document.getElementsByClassName("monitor equation")[0].value += q;
-    } else {
-        document.getElementsByClassName("monitor equation")[0].value += q;
+        console.log(`q = ${q}`);
+        if(q == "." || q == "(" || q == ")"){
+            document.getElementsByClassName("monitor equation")[0].value += q;
+            console.log(document.getElementsByClassName("monitor equation")[0].value);
+        }
+        document.getElementsByClassName("monitor equation")[0].value = document.getElementsByClassName("monitor equation")[0].value.substring(0, document.getElementsByClassName("monitor equation")[0].value.length-1);
+        console.log(document.getElementsByClassName("monitor equation")[0].value);
     }
-    document.getElementsByClassName("monitor total")[0].value = eva;
+    document.getElementsByClassName("monitor equation")[0].value += q;
+    console.log(document.getElementsByClassName("monitor equation")[0].value);
+}
+
+function del() {
+    let eq = document.getElementsByClassName("monitor equation")[0].value;
+    document.getElementsByClassName("monitor equation")[0].value = document.getElementsByClassName("monitor equation")[0].value.substring(0, eq.length-1);
 }

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="skin.css">
+    <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
     <script src="brain.js"></script>
@@ -14,6 +15,11 @@
             <input type="text" class="monitor equation" id="line" placeholder="0">
             <input type="text" class="monitor total" id="line" placeholder="0">
             <div class="flex-calc">
+                <input type="button" class="btn act add" value="." onclick="act('.')">
+                <input type="button" class="btn act add" value="(" onclick="act('(')">
+                <input type="button" class="btn act add" value=")" onclick="act(')')">
+                <input type="button" class="btn act del" value="del" onclick="del()">
+
                 <input type="button" class="btn" value="1" onclick="input(1)">
                 <input type="button" class="btn" value="2" onclick="input(2)">
                 <input type="button" class="btn" value="3" onclick="input(3)">
@@ -35,7 +41,7 @@
                 <input type="button" class="btn act" value="+" onclick="act('+')">
             </div>
         </div>
-        <p>Developer: Adam Rafli Al Hanif</p>
+        <p>Developer: <a href="https://www.linkedin.com/in/adamraflialhanif/">Adam Rafli Al Hanif</a></p>
     </div>
     <script type="text/javascript" src="brain.js"></script>
 </body>

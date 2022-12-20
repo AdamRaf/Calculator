@@ -4,19 +4,20 @@ html{
 .pgcontainer{
     width: 1000px;
     padding: 10px 0px;
-    margin: 0px auto;
+    margin: 30px auto;
     background-color: rgb(59, 59, 59);
     text-align: center;
 }
 
 .pgcontainer > h1{
     color: White;
+    font-weight: bold;
 }
 
 .calculator{
     padding: 10px;
     width: 300px;
-    margin: 0px auto;
+    margin: 30px auto;
     background-color:rgb(46, 46, 46)
 }
 
@@ -29,7 +30,7 @@ html{
 
 .equation{
     background-color: rgb(88, 88, 88);
-    color: whitesmoke;
+    color: rgb(151, 151, 151);
 }
 
 .total{
@@ -76,4 +77,16 @@ html{
 
 .c{
     background-color: rgb(175, 44, 44);
+}
+
+.del{
+    background-color:tomato;
+}
+
+.add{
+    background-color:rgb(77, 86, 95)
+}
+
+a,p{
+    color:black;
 }
