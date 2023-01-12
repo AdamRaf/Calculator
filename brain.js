@@ -23,24 +23,24 @@ function clc() {
 }
 
 function act(q) {
-    let eq = document.getElementsByClassName("monitor equation")[0].value;
-    console.log(`eq = ${eq}`);
-    let last = eq.charAt(eq.length-1);
+    let eq = document.getElementsByClassName("monitor equation")[0];
+    console.log(`eq = ${eq.value}`);
+    let last = eq.value.charAt(eq.value.length-1);
     console.log(`last = ${last}`);
     if(last == "/" || last == "*" || last == "-" || last == "+"){
         console.log(`q = ${q}`);
         if(q == "." || q == "(" || q == ")"){
-            document.getElementsByClassName("monitor equation")[0].value += q;
-            console.log(document.getElementsByClassName("monitor equation")[0].value);
+            eq.value += q;
+            console.log(eq.value);
         }
-        document.getElementsByClassName("monitor equation")[0].value = document.getElementsByClassName("monitor equation")[0].value.substring(0, document.getElementsByClassName("monitor equation")[0].value.length-1);
-        console.log(document.getElementsByClassName("monitor equation")[0].value);
+        eq.value = eq.value.substring(0, eq.value.length-1);
+        console.log(eq.value);
     }
-    document.getElementsByClassName("monitor equation")[0].value += q;
-    console.log(document.getElementsByClassName("monitor equation")[0].value);
+    eq.value += q;
+    console.log(eq.value);
 }
 
 function del() {
-    let eq = document.getElementsByClassName("monitor equation")[0].value;
-    document.getElementsByClassName("monitor equation")[0].value = document.getElementsByClassName("monitor equation")[0].value.substring(0, eq.length-1);
+    let eq = document.getElementsByClassName("monitor equation")[0];
+    eq.value = eq.value.substring(0, eq.value.length-1);
 }
